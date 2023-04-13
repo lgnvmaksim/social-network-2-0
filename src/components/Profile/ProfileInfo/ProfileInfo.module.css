@@ -1,0 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mainPhoto{
+    max-width: 250px;
+    border-radius: 50%;
+}

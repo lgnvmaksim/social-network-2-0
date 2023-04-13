@@ -22,5 +22,5 @@ const paperStyle={
     padding: '5px',
     marginTop: '10px',
     minHeight: '300px',
-    backgroundColor: '#fff'
+    backgroundColor: '#fff',
 }
