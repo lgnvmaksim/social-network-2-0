@@ -1,0 +1,14 @@
+
+
+.nav_active{
+ color: #ff0d0d;
+    text-decoration: none;
+}
+
+.navLink{
+    color: black;
+    text-decoration: none;
+}
+.navLink:hover{
+    color: #ff0000;
+}

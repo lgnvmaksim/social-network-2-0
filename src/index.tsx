@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {SocialNetwork} from './App';
+import {SocialNetwork} from './SocialNetwork';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
