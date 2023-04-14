@@ -15,18 +15,18 @@ export const Navbar = () => {
         <div>
             <NavLink to='/dialogs' className={({isActive}) => style(isActive)}>Messages</NavLink>
         </div>
-        <div>
-            <NavLink to='/users' className={({isActive}) => style(isActive)}>Users</NavLink>
-        </div>
-        <div>
-            <NavLink to='/news' className={({isActive}) => style(isActive)}>News</NavLink>
-        </div>
-        <div>
-            <NavLink to='/music' className={({isActive}) => style(isActive)}>Music</NavLink>
-        </div>
-        <div>
-            <NavLink to='/settings' className={({isActive}) => style(isActive)}>Settings</NavLink>
-        </div>
+        {/*<div>*/}
+        {/*    <NavLink to='/users' className={({isActive}) => style(isActive)}>Users</NavLink>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*    <NavLink to='/news' className={({isActive}) => style(isActive)}>News</NavLink>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*    <NavLink to='/music' className={({isActive}) => style(isActive)}>Music</NavLink>*/}
+        {/*</div>*/}
+        {/*<div>*/}
+        {/*    <NavLink to='/settings' className={({isActive}) => style(isActive)}>Settings</NavLink>*/}
+        {/*</div>*/}
     </nav>
 
 }
