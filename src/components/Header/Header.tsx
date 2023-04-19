@@ -4,10 +4,21 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import {NavLink} from "react-router-dom";
+import {Navigate, NavLink} from "react-router-dom";
 import LinearProgress from "@mui/material/LinearProgress";
+import {useAppDispatch, useAppSelector} from "../../startProject/store";
+import {authThunks} from "../../reducers/authReducer";
 
 export const Header = () => {
+    const dispatch = useAppDispatch()
+    const isLoggedIn = useAppSelector(state => state.auth.isLoggedIn)
+    const status = useAppSelector(state=>state.initialization.status)
+
+    if (!isLoggedIn) {
+        return <Navigate to={'login'}/>
+    }
+
+
 
     return  <Box sx={{ flexGrow: 1}}>
         <AppBar position="static"  style={{backgroundColor: 'whitesmoke'}} >
@@ -19,9 +30,9 @@ export const Header = () => {
                         </Typography>
                     </NavLink>
                 </div>
-                <Button  style={{color: 'black'}}>Logout</Button>
+                {isLoggedIn && <Button style={{color: 'black'}} onClick={() => dispatch(authThunks.logout())}>Logout</Button>}
             </Toolbar>
-            <LinearProgress/>
+            {status === 'loading' && <LinearProgress/>}
         </AppBar>
     </Box>
 }

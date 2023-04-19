@@ -1,21 +1,36 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './SocialNetwork.css';
-import {RoutesMenu} from "../components/Routes/RoutesMenu";
 import {Header} from "../components/Header/Header";
-import Grid from "@mui/material/Grid";
-import {GridComponent} from "../components/Body/GridComponent";
-import {Navbar} from "../components/Nav/Navbar";
-import Container from "@mui/material/Container";
+import {useAppDispatch, useAppSelector} from "./store";
+import {authThunks} from "../reducers/authReducer";
+import {ContainerBlock} from "../components/Container/ContainerBlock";
+import CircularProgress from "@mui/material/CircularProgress";
+import {BrowserRouter, Navigate} from "react-router-dom";
 
 export const SocialNetwork = () => {
+    const dispatch = useAppDispatch()
+    const isInitialized = useAppSelector(state => state.auth.isInitialized)
+
+    useEffect(() => {
+        dispatch(authThunks.initializeApp())
+    }, [])
+
+
+
+    if (!isInitialized) {
+        return <div
+            style={{position: 'fixed', top: '30%', textAlign: 'center', width: '100%'}}>
+            <CircularProgress/>
+        </div>
+    }
+
+
+
     return <div className={'app-wrapper'}>
-        <Header/>
-        <Container>
-            <Grid container spacing={4}>
-                <GridComponent xs={4} md={2} elevation={16} children={<Navbar/>}/>
-                <GridComponent xs={6} md={8} elevation={16} children={<RoutesMenu/>}/>
-            </Grid>
-        </Container>
+        <BrowserRouter>
+            <Header/>
+            <ContainerBlock/>
+        </BrowserRouter>
     </div>
 }
 

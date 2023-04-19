@@ -50,9 +50,7 @@ const initializeApp = createAppAsyncThunk<{ isLoggedIn: boolean }, void>
     try {
         const res = await authApi.me()
         if (res.data.resultCode === 0) {
-
             return {isLoggedIn: true}
-
         } else {
             return rejectWithValue(null)
         }

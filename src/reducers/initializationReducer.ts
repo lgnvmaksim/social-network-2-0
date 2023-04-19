@@ -20,5 +20,5 @@ const slice = createSlice({
     }
 })
 
-export const appReducer = slice.reducer
+export const initializationReducer = slice.reducer
 export const {setAppStatus, setAppError} = slice.actions
