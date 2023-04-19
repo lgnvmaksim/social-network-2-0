@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {SocialNetwork} from './SocialNetwork';
+import {SocialNetwork} from './startProject/SocialNetwork';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter} from "react-router-dom";
 

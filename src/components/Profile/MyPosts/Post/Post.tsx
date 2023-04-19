@@ -1,5 +1,5 @@
 import React from 'react';
-import {PostType} from "../../../../reducers/profile-reducer";
+import {PostType} from "../../../../reducers/profileReducer";
 
 type PropsType =  PostType
 

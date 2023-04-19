@@ -1,10 +1,10 @@
 import React from 'react';
 import './SocialNetwork.css';
-import {RoutesMenu} from "./components/Routes/RoutesMenu";
-import {Header} from "./components/Header/Header";
+import {RoutesMenu} from "../components/Routes/RoutesMenu";
+import {Header} from "../components/Header/Header";
 import Grid from "@mui/material/Grid";
-import {GridComponent} from "./components/Body/GridComponent";
-import {Navbar} from "./components/Nav/Navbar";
+import {GridComponent} from "../components/Body/GridComponent";
+import {Navbar} from "../components/Nav/Navbar";
 import Container from "@mui/material/Container";
 
 export const SocialNetwork = () => {

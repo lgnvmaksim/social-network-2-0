@@ -5,6 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import {NavLink} from "react-router-dom";
+import LinearProgress from "@mui/material/LinearProgress";
 
 export const Header = () => {
 
@@ -17,10 +18,10 @@ export const Header = () => {
                             Super Social Network
                         </Typography>
                     </NavLink>
-
                 </div>
-                <Button  style={{color: 'black'}}>Login</Button>
+                <Button  style={{color: 'black'}}>Logout</Button>
             </Toolbar>
+            <LinearProgress/>
         </AppBar>
     </Box>
 }
